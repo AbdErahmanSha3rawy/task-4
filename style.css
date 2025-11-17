@@ -639,12 +639,15 @@ footer .email{
     grid-template-columns: repeat(2,100px);
     gap: 20px 40px;
     margin-left: -100px;
+    margin-bottom: 50px;
 }
 .icons img{
    width: 100px;
 
 }
-
+.services{
+    margin-top:120px;
+}
 .services ,.case_studies , .text_descrip , .team ,.Testimonials ,.Contact{
 display: block;
 }
