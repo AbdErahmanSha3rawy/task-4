@@ -9,6 +9,7 @@ body{
     position: sticky;
     background-color: #fffffffe;
     z-index: 1;
+    
     top:0;
 }
 .nav img{
@@ -16,7 +17,8 @@ body{
 }
 .main_name{
   font-size: 40px;
-  margin-right: 620px;
+  margin-right: 0;
+  flex-grow: 1;
 }
 .nav ul {
     display: flex;
@@ -73,7 +75,6 @@ button:hover{
 .main_img{
     width: 500px;
     height: 500px;
-    margin-left: 620px;
 }
 .main_img:hover{
     border: 2px black solid;
@@ -82,6 +83,7 @@ button:hover{
 }
 .main{
     display: flex;
+    justify-content: space-between;
 }
 .main .Navigating{
     font-size: 60px;
@@ -93,7 +95,11 @@ button:hover{
 .icons{
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+}
+.icons img{
+margin-left: 50px;
+margin-right: 50px;
 }
 .icons img:hover{
     background-color: #B9FF66;
@@ -105,6 +111,7 @@ button:hover{
 .services  span ,.case_studies span ,.text_descrip span ,.team span ,.Testimonials span ,.Contact span{
     font-size: 40px;
     margin-right: 20px; 
+    margin-top: 17px;
     height: 50px;
     background-color: #B9FF66;
 }
@@ -113,8 +120,8 @@ font-size: 20px;
 }
 .boxes{
     display: grid;
-    grid-template-columns: repeat(2,500px);
-    gap: 80px 320px;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    gap: 80px 50px;
     margin-top: 50px;
     margin-bottom: 100px;
 }
@@ -125,8 +132,8 @@ font-size: 20px;
 }
 .box{
     display: flex;
-    width: 700px;
-    height: 300px;
+    width: 100%;
+    height: auto;
     color: #000000;
     border: 2px black solid;
     justify-content: space-between;
@@ -134,6 +141,7 @@ font-size: 20px;
     border-radius: 10%;
     box-shadow: 0px  5px black;
 }
+
 .box .text {
     margin-left: 40px;
 
@@ -203,6 +211,9 @@ font-size: 20px;
     border-radius: 7%;
     margin-bottom: 100px;
 }
+.happen img{
+    margin-left: 250px;
+}
 .happen .text .let{
     font-size: 30px;
 }
@@ -249,6 +260,12 @@ color: #B9FF66  ;
     font-size: 20px;
     margin-top: 30px;
 }
+.Consultation:hover{
+    border: 4px solid black;
+    cursor: pointer;
+    background-color: #2eec41fa;
+  /* height: 150px; */
+}
 .one{
     display: flex;
     justify-content: space-between;
@@ -283,6 +300,12 @@ color: #B9FF66  ;
     width: 50px;
     border-radius: 50% ;
 }
+.rect:hover{
+    border: 4px solid black;
+    cursor: pointer;
+    background-color: #2eec41fa;
+    height: 110px;
+}
 .nom{
     font-weight: bolder;
     margin-right: 20px;
@@ -297,6 +320,12 @@ color: #B9FF66  ;
     gap: 80px 20px;
     margin-bottom: 10px;
     padding: 10px;
+}
+.boxn:hover{
+    border: #000000 3px double;
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: rgba(96, 249, 7, 0.837);
 }
 .boxn{
     border-radius: 20px;
@@ -325,13 +354,18 @@ color: #B9FF66  ;
 }
 .team_boxes button{
     background-color: #000000;
-    margin-left: 1350px;
+    margin-left: 1000px;
+    font-size: 20px;
     color: #FFFFFF;
     width: 200px;
     height: 50px;
     border-radius: 10px;
 }
-
+.team_boxes button:hover{
+    background-color: #22e62f;
+    color: #000000;
+    font-size: larger;
+}
 .descrips{
     padding-top: 20px;
     height: 500px;
@@ -379,8 +413,7 @@ form{
     padding: 50px 0 50px 50px;
 }
 form img{
-    width: 500px;
-    margin-left: 500px;
+    width: 400px;
 }
 .radio{
 margin-bottom: 20px;
@@ -394,6 +427,7 @@ margin-bottom: 20px;
 }
 fieldset .input{
     border-radius: 10px;
+
     margin-bottom:35px;
     width: 500px;
     height: 50px;
@@ -410,13 +444,14 @@ form button{
 footer{
     background-color: black;
     color: white;
-    height: 50vh;
+    height: auto;
     border-radius: 6% 6% 0 0;
     padding: 60px;
 }
 footer .Nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
 }
  .first{
@@ -437,16 +472,447 @@ footer  .second ul {
     align-items: center;
     list-style-type: none;   
     
-    margin-left: 300px;
-    
+}
+footer  .second ul a{
+    width: 100px;
 }
 footer .Nav a{
     margin-left: 20px;
+    width: 70px;
     color: aliceblue;
     text-decoration-line: underline;
+}
+footer .Nav a:hover{
+    text-decoration-line: none;
+    font-size: larger;
+}
+.social{
+    display: flex;
+    align-items: center;
+}
+footer  .links img {
+    width: 25px;
     
+   
+}
+footer .links{
+    background-color: aliceblue;
+    width: 30px;
+     display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 35px;
 
 }
+footer .links:hover{
+    margin-bottom: 20px;
+}
+footer .face{
+    background-color: #000000;
+    height: 70px;
+    width: 50px;
+}
+footer .face:hover{
+    height: 50px;
+}
+footer .textcont span{
+    background-color: #B9FF66;
+    color: #000000;
+    font-size: 30px;
+    border-radius: 10px;
+    
+}
+footer .textcont p{
+    font-size: 25px;
+}
+footer form {
+    background-color: #292A32;
+    width: 700px;
+    height: 100px;
+    margin-left: 200px;
+    border-radius: 5%;
+
+}
+footer form input{
+height: 70px;
+    width: 300px;
+    background-color: #292A32;
+    padding-left: 30px;
+    font-size: 20px;
+    border-radius: 10%;
+}
+footer form input:focus{
+    background-color: #F3F3F3;
+}
+footer form button{
+    width: 300px;
+    height: 80px;
+    background-color: #B9FF66;
+    color: #000000;
+    font-size: 20px;
+    margin-right: 20px;
+}
+footer form button:hover{
+    transform: scale(1.1);
+    background-color: #0cdc24;
+    border: #000000 3px solid;
+}
+footer .email{
+    display: flex;
+}
+.right{
+    margin-right: 40px;
+}
+.finish{
+    display: flex;
+    margin-top: 20px;
+    font-size: 25px;
+}
+.finish a{
+    color: #FFFFFF;
+
+}
+@media (max-width: 600px) {
+
+.nav{
+    height: auto;
+    display: block;
+}
+ body{
+    padding-left:20px;
+ }
+.main_name{
+  font-size: 40px;
+  margin-right: 2px;
+}
+
+.nav a{
+    text-decoration-line: none;
+    color: black ;
+    display: block;
+    
+    margin-right:9px;
+    width: 80px;
+}
+
+.nav .Request{
+    border: 2px black solid;
+    border-radius: 10%;
+    padding: 5px 20px;
+    height: 15px;
+    width:120px;
+}
+.nav ul {
+    display: block;
+    list-style-type: none;   
+    align-items: center;
+}
+.nav .Request:hover{
+    height: auto;
+}
+.home {
+    
+    height: 100vh;
+}
+
+
+
+.main_img{
+    width: 300px;
+    height: 200px;
+    margin: 20px 2px;
+}
+
+.main{
+    display:contents;
+}
+.main .Navigating{
+    font-size: 30px;
+}
+
+.main .paragraph{
+    font-size:20px ;
+}
+.icons{
+    display: grid;
+    grid-template-columns: repeat(2,100px);
+    gap: 20px 40px;
+    margin-left: -100px;
+}
+.icons img{
+   width: 100px;
+
+}
+
+.services ,.case_studies , .text_descrip , .team ,.Testimonials ,.Contact{
+display: block;
+}
+
+.boxes{
+    display: grid;
+    grid-template-columns: repeat(1,100px);
+    gap: 80px 320px;
+    margin-top: 50px;
+    flex-wrap:wrap;
+    margin-bottom: 100px;
+    margin-left: 50px;
+}
+.boxes .img{
+    width: 150px;
+    height: 150px;
+   margin-left: 70px;
+
+}
+.box{
+    display: block;
+    width: 300px;
+    height: 300px;
+    color: #000000;
+    border: 2px black solid;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10%;
+    box-shadow: 0px  5px black;
+}
+
+.box .text {
+    margin-left: 10px;
+
+}
+.box .text p{
+    margin-bottom: 2%;
+    font-size: 25px;
+
+}
+.box .text span{
+    margin-bottom: 0;
+    font-size:25px;
+}
+.box .text button{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    margin-top: 0;
+    margin-left: 10px;
+    background-color: #191A23;
+}
+
+
+
+.happen{
+   display: block;
+    background-color: #F3F3F3;
+    padding-left: 40px;
+    margin-left: 20px;
+    border-radius: 7%;
+    margin-bottom: 100px;
+    height: auto;
+}
+.happen img{
+    width: 250px;
+    margin-top:20px;
+    margin-left: 20px;
+}
+.happen .text .let{
+    font-size: 30px;
+    margin-bottom: 110px;
+}
+.happen .text .Contact{
+    font-size: 20px;
+}
+.happen .text button{
+    background-color: #191A23;
+    color:#FFFFFF ;
+    height: 50px;
+    width: 200px;
+    border-radius: 10%;
+    font-size: 15px;
+  
+}
+
+.descriptions{
+    display: block;
+    background-color: #191A23;
+    color: #FFFFFF;
+    padding: 50px;
+    height: auto;
+    border-radius: 10%;
+    margin-bottom: 100px;
+    margin-left: 25px;
+}
+
+.Consultation{
+    background-color: #B9FF66;
+    height: auto;
+    padding: 10px;
+    margin-left: 25px;
+    border-radius: 30px;
+    border: #000000 1px solid;
+    box-shadow: 0px 4px black;
+ margin-bottom: 50px;
+}
+
+
+.one{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.one button{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+.rect{
+    margin-left: 25px;
+
+    display: flex;
+    width: 220px;
+    justify-content: space-between;
+    height: auto;
+    border-radius:30px;
+    background-color: #F3F3F3;
+    margin-bottom: 30px;
+    padding:10px 50px;
+    align-items: center;
+     border: #000000 1px solid;
+    box-shadow: 0px 4px black;
+}
+.rect span{
+    font-size: 30px;
+
+}
+.rect button{
+    height: 50px;
+    width: 50px;
+    border-radius: 50% ;
+}
+
+.nom{
+    font-weight: bolder;
+    margin-right: 20px;
+}
+.team{
+    /* display: flex; */
+    margin-top: 30px;
+}
+.team_boxes{
+    display: grid;
+    grid-template-columns: repeat(1,330px);
+    gap: 50px 20px;
+    margin-bottom: 130px;
+    padding: 10px;
+}
+
+.team_boxes button{
+    background-color: #000000;
+    margin-left: 80px;
+    font-size: 20px;
+    color: #FFFFFF;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.descrips{
+    padding-top: 20px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(1,250px);
+    justify-content: space-between;
+    background-color: #000000;
+    border-radius: 25px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 130px;
+    color: #FFFFFF;
+}
+.descrips button{
+    display: none;
+   
+
+}
+.descrips img{
+   margin-left: 110px;
+    width: 90px;
+    margin-bottom: 10px;
+}
+
+
+form{
+    display: block;
+   width: 220px;
+    padding: 50px 0 50px 50px;
+}
+form img{
+display: none;
+}
+
+ fieldset  form textarea{
+    margin-bottom: 50px;
+    padding: 20px;
+    height: 70px;
+    width: 190px;
+    border-radius: 10px;
+}
+fieldset .input{
+    border-radius: 10px;
+    margin-bottom:35px;
+    width: 200px;
+    height: 30px;
+    padding-left: 20px;
+}
+form button{
+    background-color: #000000;
+    color: #FFFFFF;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+footer{
+    background-color: black;
+    display: block;
+    color: white;
+    height: auto;
+    width: 200px;
+    border-radius: 6% 6% 0 0;
+    padding: 60px;
+}
+footer .Nav {
+    display: block;
+    height: auto;
+  
+}
+ .first{
+    display: block;
+    font-size: 35px;
+ }
+ .first img{
+    width: 50px;
+    height: auto;
+    display: flex;
+    align-items: center;
+ }
+
+footer  .second ul {
+    font-size: 20px;
+    margin-left: -50px;
+    display: block;
+   
+   
+ 
+    
+}
+footer .Nav a{
+    margin-left: 2px;
+    color:#FFFFFF;
+    text-decoration-line: underline;
+}
+
 .social{
     display: flex;
     align-items: center;
@@ -466,10 +932,297 @@ footer .links{
     height: 35px;
 
 }
+footer .links:hover{
+    margin-bottom: 20px;
+}
 footer .face{
     background-color: #000000;
     height: 70px;
     width: 50px;
+}
+footer .face:hover{
+    height: 50px;
+}
+footer .textcont span{
+    background-color: #B9FF66;
+    color: #000000;
+    font-size: 30px;
+    border-radius: 10px;
+    
+}
+footer .textcont p{
+    font-size: 25px;
+}
+footer form {
+    display: block;
+    background-color: #292A32;
+    width: auto;
+    height: auto;
+    margin-left: -10px;
+    border-radius: 5%;
+
+}
+footer form input{
+height: auto;
+    width: 120px;
+    background-color: #292A32;
+    padding-left: 10px;
+    margin-left: -20px;
+    font-size: 20px;
+    border-radius: 10%;
+}
+
+footer form button{
+    width: 150px;
+    height: auto;
+    background-color: #B9FF66;
+    color: #000000;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: -30px;
+}
+footer form button:hover{
+    transform: scale(1.1);
+    background-color: #0cdc24;
+    border: #000000 3px solid;
+}
+footer .email{
+    display: block;
+}
+.right{
+    margin-bottom: 40px;
+
+}
+.finish{
+    display: block;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+
+body{
+    margin: 0;
+    padding: 40px 40px 0 20px;
+    padding-left: 10px;
+    font-family: sans-serif;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    width: 100%;
+    background-color: #fffffffe;
+    z-index: 1;
+    
+    top:0;
+}
+.nav img{
+    margin-right: 10px;
+}
+.main_name{
+  font-size: 40px;
+  margin-right: 0;
+  flex-grow: 1;
+}
+.nav ul {
+    display: flex;
+    list-style-type: none;   
+    align-items: center;
+    margin-left: -10px;
+}
+.nav a{
+    text-decoration-line: none;
+    color: black ;
+    display: flex;
+    margin-right: 5px;
+    margin-left: -5px;
+
+    width: 80px;
+}
+
+.nav .Request{
+    border: 2px black solid;
+    border-radius: 10%;
+    padding: 15px 20px;
+    margin-left: -30px;
+    width:50px;
+}
+
+
+.main_img{
+    width: 250px;
+    height: 300px;
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+.main .Navigating{
+    font-size: 50px;
+}
+
+
+.icons{
+    margin-top: 50px;
+    display: grid;
+grid-template-columns: repeat(3,90px);
+gap: 30px 80px;
+    justify-content: center;
+    margin-left: -100px;
+}
+.services{
+    margin-top: 10px;
+
+}
+
+.services ,.case_studies , .text_descrip , .team ,.Testimonials ,.Contact{
+    display: flex;
+}
+
+.boxes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(355px,1fr));
+    gap: 80px 50px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.boxes:hover{
+    transform: scale(0.9);
+}
+.boxes .img{
+    width: 220px;
+    height: 150px;
+    margin-right: 50px;
+}
+.box{
+    display: flex;
+    width: 100%;
+    height: auto;
+    color: #000000;
+    border: 2px black solid;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10%;
+    box-shadow: 0px  5px black;
+}
+
+
+.happen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F3F3F3;
+    padding-left: 40px;
+    border-radius: 7%;
+    margin-bottom: 40px;
+}
+.happen img{
+    margin-left: 70px;
+    width: 400px;
+}
+
+.case_studies span{
+    height: auto;
+}
+
+.descriptions{
+  margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+
+.team_boxes{
+    display: grid;
+    grid-template-columns: repeat(2,300px);
+    justify-content: space-between;
+    gap: 50px 10px;
+    margin-bottom: 6px;
+    padding: 10px;
+}
+.boxn:hover{
+    border: #000000 3px double;
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: rgba(96, 249, 7, 0.837);
+}
+.boxn{
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px black solid;
+    box-shadow: 0px 4px black;
+}
+.mini{
+    display: flex;
+    justify-content: space-between;
+}
+.mini span{
+    font-size: 25px;
+}
+.mini  p{
+    font-size: 20px;
+}
+.mini a{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000000;
+}
+.team_boxes button{
+    margin-left: 500px;
+    
+}
+
+.descrips{
+    padding-top: 20px;
+    height:auto;
+    padding-right: 0;
+    display: grid;
+    grid-template-columns: repeat(2,400px);
+   
+}
+.descrips button{
+    display: none;
+
+}
+.descrips img{
+    display: flex;
+   justify-content: center;
+    width: 200px;
+}
+
+
+form img{
+    display: none;
+}
+
+
+footer .Nav {
+    display: block;
+ 
+    margin-bottom: 20px;
+}
+ .first{
+    display: flex;
+    font-size: 35px;
+ }
+ .first img{
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+ }
+
+footer  .second ul {
+  margin-left: -230px; 
+    
 }
 footer .textcont span{
     background-color: #B9FF66;
@@ -483,9 +1236,10 @@ footer .textcont p{
 }
 footer form {
     background-color: #292A32;
-    width: 700px;
-    height: 100px;
-    margin-left: 300px;
+    width: 500px;
+    display: block;
+    height: auto;
+    margin-left: 10px;
     border-radius: 5%;
 
 }
@@ -495,7 +1249,12 @@ height: 70px;
     background-color: #292A32;
     padding-left: 30px;
     font-size: 20px;
+    margin-left: -10px;
+    margin-bottom: 30px;
     border-radius: 10%;
+}
+footer form input:focus{
+    background-color: #F3F3F3;
 }
 footer form button{
     width: 300px;
@@ -505,18 +1264,14 @@ footer form button{
     font-size: 20px;
     margin-right: 20px;
 }
-
+footer form button:hover{
+    transform: scale(1.1);
+    background-color: #0cdc24;
+    border: #000000 3px solid;
+}
 footer .email{
-    display: flex;
+    display: block;
 }
-.right{
-    margin-right: 40px;
-}
-.finish{
-    display: flex;
-    margin-top: 20px;
-    font-size: 25px;
-}
-.finish a{
-    color: #FFFFFF;
+
+
 }
